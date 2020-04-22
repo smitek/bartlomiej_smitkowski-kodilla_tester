@@ -1,0 +1,8 @@
+rootProject.name = 'kodilla-course'
+include 'kodilla-intro'
+include 'kodilla-basic-tests'
+include 'inheritance'
+include 'com.kodilla'
+include 'com.kodilla:inheritance'
+findProject(':com.kodilla:inheritance')?.name = 'inheritance'
+
