@@ -12,7 +12,22 @@ public class CalculatorTestSuite {
         int a = 5;
         int b = 8;
         int sumResult = calculator.sum(a, b);
-        assertEquals (14, sumResult);
+        assertEquals (13, sumResult);
+    }
+    @Test
+    public void testSub(){
+        Calculator calculator = new Calculator();
+        int a = 5;
+        int b = 8;
+        int subResult = calculator.sub(a, b);
+        assertEquals(-3, subResult);
+    }
+    @Test
+    public void testPow(){
+        Calculator calculator = new Calculator();
+        int c = 5;
+        double powResult = calculator.pow(c);
+        assertEquals(25, powResult);
     }
 
 }
