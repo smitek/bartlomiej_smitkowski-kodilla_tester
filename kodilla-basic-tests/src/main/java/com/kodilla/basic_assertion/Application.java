@@ -6,7 +6,6 @@ public class Application<correct, correctsub, correctpow> {
     public Application(Calculator calculator) {
         this.calculator = calculator;
     }
-
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
         int a = 5;
