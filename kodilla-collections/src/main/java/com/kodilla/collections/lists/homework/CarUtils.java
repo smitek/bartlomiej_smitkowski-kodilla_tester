@@ -14,12 +14,11 @@ public class CarUtils {
         describeCar.add(new Ford(65));
         describeCar.add(new Audi(123));
         Car fiat = new Fiat(75);
-        describeCar.add(fiat);
 
+        describeCar.add(fiat);
         describeCar.remove(0);
         describeCar.remove(fiat);
 
         System.out.println("został " + describeCar.size());
-
     }
 }
