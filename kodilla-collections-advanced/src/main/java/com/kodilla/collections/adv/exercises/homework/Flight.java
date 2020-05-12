@@ -3,13 +3,13 @@ package com.kodilla.collections.adv.exercises.homework;
 import java.util.Objects;
 
 public class Flight {
+
     public static String arrival;
-    String departure;
- //   String arrival;
+    public String departure;
 
     public Flight(String departure, String arrival) {
         this.departure = departure;
-        this.arrival = arrival;
+        Flight.arrival = arrival;
     }
 
     public String getDeparture() {
@@ -25,8 +25,7 @@ public class Flight {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Flight flight = (Flight) o;
-        return Objects.equals(departure, flight.departure) &&
-                Objects.equals(arrival, flight.arrival);
+        return Objects.equals(departure, flight.departure);
     }
 
     @Override
