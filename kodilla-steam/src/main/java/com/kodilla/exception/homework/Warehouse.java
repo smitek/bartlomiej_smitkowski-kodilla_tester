@@ -9,14 +9,16 @@ public class Warehouse {
     public List<Order> getOrderList() {
         return orders;
     }
-    public void addOrder(Order order){
+
+    public void addOrder(Order order) {
         orders.add(order);
     }
-    public Order getOrder(String number) throws OrderDosentExistException{
+
+    public Order getOrder(String number) throws OrderDosentExistException {
         Order orderNr = orders.stream()
-                .filter(o->o.getNumber().equals(number))
+                .filter(o -> o.getNumber().equals(number))
                 .findFirst()
-                .orElseThrow(()-> new OrderDosentExistException());
+                .orElseThrow(() -> new OrderDosentExistException());
         return orderNr;
     }
 
