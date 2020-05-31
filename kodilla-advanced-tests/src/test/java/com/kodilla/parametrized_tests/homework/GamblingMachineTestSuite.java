@@ -17,7 +17,7 @@ public class GamblingMachineTestSuite {
 
     @ParameterizedTest
     @CsvFileSource(resources = "/stringGamblingMachine.csv", numLinesToSkip = 0)
-    public void numbersFromCsv (String none, String ntwo, String nthere, String nfour) {
+    public void numbersFromCsv(String none, String ntwo, String nthere, String nfour) {
         //given
         GamblingMachine gamblingMachine = new GamblingMachine();
         Set<String> setOfString = new HashSet<>(Arrays.asList(none, ntwo, nthere, nfour));
@@ -25,9 +25,9 @@ public class GamblingMachineTestSuite {
                 .map(Integer::parseInt).collect(Collectors.toSet());
         //when
         //then
-        assertThrows(InvalidNumberException.class, ()-> {
-            gamblingMachine.howManyWins(setOfInteger);
-        }
+        assertThrows(InvalidNumberException.class, () -> {
+                    gamblingMachine.howManyWins(setOfInteger);
+                }
         );
     }
 }
